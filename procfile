@@ -1,1 +1,2 @@
-web: gunicorn CollegeManagementSystem.wsgi
+web: gunicorn CollegeManagementSystem.wsgi:application
+python manage.py collectstatic --noinput
