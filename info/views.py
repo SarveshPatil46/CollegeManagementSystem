@@ -6,7 +6,6 @@ from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 
-
 # Create your views here.
 
 
@@ -16,7 +15,7 @@ def index(request):
         return render(request, 'info/t_homepage.html')
     if request.user.is_student:
         return render(request, 'info/homepage.html')
-    return render(request, 'info/logout.html')
+    return render(request, 'info/login_error.html')
 
 
 @login_required()
